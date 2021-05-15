@@ -1,0 +1,14 @@
+.button_view {
+  position: relative;
+  left: 750px;
+  top: 200px;
+  border-radius: 100%;
+  background-color: aquamarine;
+  color: brown;
+  font-size: 36px;
+  font-weight: bold;
+  width: 150px;
+  height: 150px;
+  padding: auto;
+  margin: 20px;
+}
