@@ -6,22 +6,13 @@ const refs = {
   stpButtonNode: document.querySelector('button[data-action="stop"]'),
 };
 
-
-
-
 refs.strtButtonNode.addEventListener('click', changeColoronStartClick);
 
 refs.stpButtonNode.addEventListener('click', stopChangeColoronStartClick);
 
-
-
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
-
-
-
-
 
 const colors = [
   '#FFFFFF',
@@ -32,26 +23,19 @@ const colors = [
   '#795548',
 ];
 
-const colorsLength = colors.length;
+const colorsLength = colors.length - 1;
 let counter = null;
 
-
 function changeColoronStartClick() {
-  
-  refs.strtButtonNode.setAttribute("disabled", "disabled");
+  refs.strtButtonNode.setAttribute('disabled', 'disabled');
   counter = setInterval(() => {
     let randomColor = randomIntegerFromInterval(1, colorsLength);
-  
+
     refs.bodyNode.style.backgroundColor = colors[randomColor];
-  
-  
   }, 1000);
-  
-};
-  
+}
+
 function stopChangeColoronStartClick() {
-  refs.strtButtonNode.removeAttribute("disabled");
+  refs.strtButtonNode.removeAttribute('disabled');
   clearInterval(counter);
-};
-
-
+}
